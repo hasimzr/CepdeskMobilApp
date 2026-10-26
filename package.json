@@ -1,0 +1,47 @@
+{
+  "name": "cepdesk-mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "tsx --test tests/*.test.ts",
+    "bundle": "expo export --platform android",
+    "ios": "expo run:ios",
+    "check": "npm run typecheck && npm run lint && npm test && npm run bundle",
+    "android:prebuild": "expo prebuild --platform android --no-install",
+    "android:release": "bash scripts/build-android.sh"
+  },
+  "dependencies": {
+    "expo": "~54.0.0",
+    "expo-dev-client": "~6.0.0",
+    "expo-modules-core": "~3.0.30",
+    "expo-secure-store": "~15.0.0",
+    "expo-status-bar": "~3.0.0",
+    "expo-system-ui": "~6.0.9",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-safe-area-context": "~5.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "~19.1.0",
+    "eslint": "^9.0.0",
+    "eslint-config-expo": "~10.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.2"
+  },
+  "expo": {
+    "autolinking": {
+      "nativeModulesDir": "./modules"
+    }
+  },
+  "license": "MIT",
+  "description": "Android remote control for the CepDesk COSMIC desktop service",
+  "homepage": "https://cepdesk.hasimozer.com",
+  "engines": {
+    "node": ">=20.19.4"
+  }
+}

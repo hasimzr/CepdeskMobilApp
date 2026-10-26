@@ -1,0 +1,38 @@
+# Dependencies and generated Expo/native projects. Keep modules/**/android sources.
+/node_modules/
+/.expo/
+/android/
+/ios/
+/dist/
+/release/
+/.tools/
+/coverage/
+
+# Native build caches and local machine configuration.
+.gradle/
+build/
+.cxx/
+local.properties
+*.log
+*.tsbuildinfo
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Credentials, signing files and local runtime/test state.
+.env
+.env.*
+!.env.example
+credentials.json
+google-services.json
+GoogleService-Info.plist
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.key
+*.pem
+!modules/cepdesk-native/android/src/test/resources/*.pem
+*.apk
+*.aab
+.test-state/
